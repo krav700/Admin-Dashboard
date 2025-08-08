@@ -21,6 +21,7 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--projects-bg-color);
   }
   
   img, picture, video, canvas, svg {
@@ -63,6 +64,7 @@
 /* Sidebar */
 
 .sidebar {
+    border-bottom-right-radius: 5px;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     background-color: var(--main-color);
