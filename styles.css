@@ -1,0 +1,198 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+/* End of CSS reset */
+
+:root {
+    --main-color: rgb(69, 144, 206);
+    --projects-bg-color: rgb(227, 232, 239);
+    --accent-color: rgb(231, 182, 74);
+}
+
+.layout-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 7.5fr;
+}
+
+/* Sidebar */
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: var(--main-color);
+    padding: 1rem;
+}
+
+.header, .content-area {
+    grid-column: 2 / 3;
+}
+
+.sidebar-icon-text > h1 {
+  margin-bottom: 2rem;
+  color: #FFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+a > h3 {
+  color: #FFF;
+}
+
+.sidebar-icon-text > img {
+  height: 50px;
+  color: #FFF;
+}
+
+.sidebar-icon-text {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Header */
+
+.header {
+  grid-row: 1 / 2;
+  background-color: purple;
+}
+
+/* Upper Header */
+
+.upper-header, .upper-header-search, .upper-header-icons {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.upper-header {
+  gap: 5rem;
+  padding: 2rem;
+}
+
+#search {
+  width: 40vw;
+  height: 2.5vh;
+  border-radius: 20px;
+}
+
+/* Lower Header  */
+
+.lower-header {
+  display: grid;
+  position: relative;
+}
+
+.greeting, .greeting-user, .header-buttons{
+  display: flex;
+}
+
+.greeting {
+  flex-direction: column;
+}
+
+.greeting > p {
+  font-weight: bold;
+}
+
+.greeting-user {
+  justify-content: start;
+  padding-left: 2rem;
+}
+
+.header-buttons {
+  justify-content: end;
+  gap: 2rem;
+  position: absolute;
+  right: 5rem;
+  top: 25%;
+  padding-left: 2rem;
+}
+
+/* Content area */
+
+.content-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 2rem;
+  background-color: var(--projects-bg-color);
+}
+
+/* Projects */
+
+.projects {
+  grid-row: 1 / 3;
+}
+.project-cards {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(3, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #FFF;
+  padding: 2rem;
+  position: relative;
+  border-radius: 5px;
+  border-left: 10px solid var(--accent-color);
+}
+
+.project-icons {
+  display: flex;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.project-card > p {
+  width: 40ch;
+  text-wrap: balance;
+}
