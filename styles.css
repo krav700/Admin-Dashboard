@@ -49,9 +49,9 @@
 /* End of CSS reset */
 
 :root {
-    --main-color: rgb(69, 144, 206);
+    --main-color: rgb(46, 147, 230);
     --projects-bg-color: rgb(227, 232, 239);
-    --accent-color: rgb(231, 182, 74);
+    --accent-color: rgb(239, 180, 52);
 }
 
 .layout-container {
