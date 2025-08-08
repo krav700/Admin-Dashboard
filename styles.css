@@ -66,15 +66,29 @@
     grid-column: 1 / 2;
     grid-row: 1 / -1;
     background-color: var(--main-color);
-    padding: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(12, 55px);
+    grid-template-areas: "dashboard"
+                         "."
+                         "home"
+                         "profile"
+                         "messages"
+                         "history"
+                         "tasks"
+                         "communities"
+                         "."
+                         "settings"
+                         "support"
+                         "privacy";
 }
 
+
 .header, .content-area {
-    grid-column: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .sidebar-icon-text > h1 {
-  margin-bottom: 2rem;
   color: #FFF;
 }
 
@@ -82,18 +96,66 @@ a {
   text-decoration: none;
 }
 
-a > h3 {
+a > h2 {
   color: #FFF;
 }
 
+#dashboard-icon {
+  height: 60px;
+}
+
 .sidebar-icon-text > img {
-  height: 50px;
+  height: 25px;
   color: #FFF;
 }
 
 .sidebar-icon-text {
   display: flex;
+  align-items: center;
   gap: 1rem;
+}
+
+#dashboard {
+  position: relative;
+  right: 1rem;
+  padding-bottom: 2rem;
+  grid-area: dashboard;
+}
+
+#home {
+  grid-area: home;
+}
+
+#profile {
+  grid-area: profile;
+}
+
+#messages {
+  grid-area: messages;
+}
+
+#history {
+  grid-area: history;
+}
+
+#tasks {
+  grid-area: tasks;
+}
+
+#communities {
+  grid-area: communities;
+}
+
+#settings {
+  grid-area: settings;
+}
+
+#support {
+  grid-area: support;
+}
+
+#privacy {
+  grid-area: privacy;
 }
 
 /* Header */
@@ -119,6 +181,14 @@ a > h3 {
   width: 40vw;
   height: 2.5vh;
   border-radius: 20px;
+}
+
+div > img {
+  height: 25px;
+}
+
+a > img {
+  height: 25px;
 }
 
 /* Lower Header  */
@@ -190,9 +260,14 @@ a > h3 {
   position: absolute;
   right: 2rem;
   bottom: 2rem;
+  gap: 1rem;
 }
 
 .project-card > p {
-  width: 40ch;
+  width: 35ch;
   text-wrap: balance;
+}
+
+.announcements, .trending {
+  padding-left: 2rem;
 }
